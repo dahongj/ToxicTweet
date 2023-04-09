@@ -32,3 +32,14 @@ that the docker is working.
 ![docker](https://user-images.githubusercontent.com/33811542/227808275-baf0dec3-181c-4b04-beeb-b42c35667edb.jpg)
 
 Milestone 2
+
+Hugging Face URL:
+https://huggingface.co/spaces/dahongj/sentiment-analysis
+
+Models Used:
+
+https://huggingface.co/siebert/sentiment-roberta-large-english?text=I+like+you.+I+love+you
+
+https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis
+
+https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
