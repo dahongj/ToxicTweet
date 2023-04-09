@@ -1,6 +1,7 @@
 import numpy as np
 import streamlit as st
 from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 def bertweet(data):
@@ -12,7 +13,7 @@ def bertweet(data):
     return label, score 
 
 def roberta(data):
-    specific_model = pipeline("cardiffnlp/twitter-roberta-base-sentiment")
+    specific_model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
     result = specific_model(data)
     label = result[0]['label']
     score = result[0]['score']
