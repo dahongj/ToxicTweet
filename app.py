@@ -11,8 +11,8 @@ def bertweet(data):
 
     return label, score 
 
-def twitterxlm(data):
-    specific_model = pipeline("cardiffnlp/twitter-xlm-roberta-base-sentiment")
+def roberta(data):
+    specific_model = pipeline("cardiffnlp/twitter-roberta-base-sentiment")
     result = specific_model(data)
     label = result[0]['label']
     score = result[0]['score']
@@ -26,7 +26,7 @@ def getSent(data, model):
         col1.metric("Feeling",label,None)
         col2.metric("Score",score,None)
     elif(model == 'twitterXLM'):
-        label,score = twitterxlm(data)
+        label,score = roberta(data)
         col1, col2 = st.columns(2)
         col1.metric("Feeling",label,None)
         col2.metric("Score",score,None)
@@ -37,7 +37,7 @@ def rendPage():
     st.text("")
     type = st.selectbox(
         'Choose your model',
-        ('Bertweet','twitterXLM',))
+        ('Bertweet','Roberta',))
     st.text("")
 
     if st.button('Calculate'):
