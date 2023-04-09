@@ -25,7 +25,7 @@ def getSent(data, model):
         col1, col2 = st.columns(2)
         col1.metric("Feeling",label,None)
         col2.metric("Score",score,None)
-    elif(model == 'twitterXLM'):
+    elif(model == 'Roberta'):
         label,score = roberta(data)
         col1, col2 = st.columns(2)
         col1.metric("Feeling",label,None)
