@@ -5,12 +5,19 @@ import torch
 
 def bertweet(data):
     specific_model = pipeline(model="finiteautomata/bertweet-base-sentiment-analysis")
-    print(specific_model(data))
+    result = specific_model(data)
+    label = result['label']
+    score = result['score']
+
+    return label, score 
 
 
 def getSent(data, model):
     if(model == 'Bertweet'):
-        bertweet(data)
+        label,score = bertweet(data)
+        col1, col2 = st.columns(2)
+        col1.metric("Feeling",label,None)
+        col2.metric("Score",score,None)
 
 
 def rendPage():
