@@ -55,7 +55,7 @@ def getSent(data, model):
 
 def rendPage():
     st.title("Sentiment Analysis")
-    userText = st.text_input('User Input', "Hope you are having a great day!")
+    userText = st.text_area('User Input', "Hope you are having a great day!")
     st.text("")
     type = st.selectbox(
         'Choose your model',
