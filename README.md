@@ -32,3 +32,6 @@ that the docker is working.
 ![docker](https://user-images.githubusercontent.com/33811542/227808275-baf0dec3-181c-4b04-beeb-b42c35667edb.jpg)
 
 Milestone 2
+
+Hugging Face URL:
+https://huggingface.co/spaces/dahongj/sentiment-analysis
