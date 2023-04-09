@@ -22,7 +22,7 @@ def rendPage():
 
     if st.button('Calculate'):
         if(userText!="" and type != None):
-            st.text
+            st.text("")
             getSent(userText,type)
 
 rendPage()
