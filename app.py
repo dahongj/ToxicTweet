@@ -1,10 +1,12 @@
 import numpy as np
 import streamlit as st
 from transformers import pipeline
+import torch
 
 def bertweet(data):
     specific_model = pipeline(model="finiteautomata/bertweet-base-sentiment-analysis")
     print(specific_model(data))
+
 
 def getSent(data, model):
     if(model == 'Bertweet'):
