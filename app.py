@@ -5,7 +5,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
 def bertweet(data):
-    specific_model = pipeline(model="finiteautomata/bertweet-base-sentiment-analysis")
+    specific_model = AutoModelForSequenceClassification.from_pretrained(model="finiteautomata/bertweet-base-sentiment-analysis")
     result = specific_model(data)
     label = result[0]['label']
     score = result[0]['score']
