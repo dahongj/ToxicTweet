@@ -38,7 +38,7 @@ def siebert(data):
 def finetuned(data):
     specific_model = pipeline(model='dahongj/finetuned_toxictweets')
     result = specific_model(data)
-    max = result[0]['label']
+    maxres = result[0]['label']
     maxscore = result[0]['score']
     sec = result[1]['label']
     secscore = result[1]['score']
@@ -48,7 +48,7 @@ def finetuned(data):
             sec = result[i]['label']
             secscore = result[i]['score']
 
-    return max, maxscore, sec, secscore
+    return maxres, maxscore, sec, secscore
 
 def getSent(data, model):
     if(model == 'Bertweet'):
