@@ -44,9 +44,9 @@ def finetuned(data):
     secscore = result[1]['score']
 
     for i in result:
-        if result[i]['score'] > secscore:
-            sec = result[i]['label']
-            secscore = result[i]['score']
+        if i['score'] > secscore:
+            sec = i['label']
+            secscore = i['score']
 
     return maxres, maxscore, sec, secscore
 
