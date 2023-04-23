@@ -38,10 +38,17 @@ def siebert(data):
 def finetuned(data):
     specific_model = pipeline(model='dahongj/finetuned_toxictweets')
     result = specific_model(data)
-    label = result[0]['label']
-    score = result[0]['score']
+    max = result[0]['label']
+    maxscore = result[0]['score']
+    sec = result[1]['label']
+    secscore = result[1]['score']
 
-    return label, score
+    for i in result:
+        if result[i]['score'] > secscore:
+            sec = result[i]['label']
+            secscore = result[i]['score']
+
+    return max, maxscore, sec, secscore
 
 def getSent(data, model):
     if(model == 'Bertweet'):
@@ -60,10 +67,12 @@ def getSent(data, model):
         col1.metric("Feeling",label,None)
         col2.metric("Score",score,None)
     elif(model == 'Finetuned'):
-        label, score = finetuned(data)
-        col1, col2 = st.columns(2)
-        col1.metric("Label",label,None)
+        label, score, sec, secsc = finetuned(data)
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Highest",label,None)
         col2.metric("Score",score,None)
+        col3.metric("Second Highest", sec, None)
+        col4.metric("Score", secsc, None)
 
 def rendPage():
     st.title("Sentiment Analysis")
