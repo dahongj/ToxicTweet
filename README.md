@@ -43,3 +43,18 @@ https://huggingface.co/siebert/sentiment-roberta-large-english?text=I+like+you.+
 https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis
 
 https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest
+
+Milestone 3
+
+Finetuned Model URL: https://huggingface.co/dahongj/finetuned_toxictweets
+
+Hugging Face URL:
+https://huggingface.co/spaces/dahongj/sentiment-analysis
+
+Finetune python file was done on Google Colab following the documentation of HuggingFace's finetuning
+process. Initially the model distilbert-base-uncased was selected. The tweet and the labels are read
+into variables and ran through a Dataset class. A tokenizer for Distilbert was created.
+Then using the multivariable version of the distilbert-base-uncased model because there are 6 forms 
+of toxicity included in the dataset that we want to finetune for. Using the native pytorch method
+of training as demonstrated on the HuggingFace documentation, the model was trained and evaluated.
+Both the finetuned model and its tokenizer are saved and uploaded onto HuggingFace.

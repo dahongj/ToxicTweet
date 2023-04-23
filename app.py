@@ -62,7 +62,7 @@ def getSent(data, model):
     elif(model == 'Finetuned'):
         label, score = finetuned(data)
         col1, col2 = st.columns(2)
-        col1.metric(label,label,None)
+        col1.metric("Label",label,None)
         col2.metric("Score",score,None)
 
 def rendPage():
