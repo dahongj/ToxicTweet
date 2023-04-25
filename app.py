@@ -2,7 +2,7 @@ import numpy as np
 import streamlit as st
 from transformers import pipeline
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
-
+from PIL import Image
 import torch
 
 def bertweet(data):
@@ -93,5 +93,8 @@ def rendPage():
         if(userText!="" and type != None):
             st.text("")
             getSent(userText,type)
+    
+    image = Image.open("milestone3.jpg")
+    st.image(image, caption="10 Example Texts")
 
 rendPage()
