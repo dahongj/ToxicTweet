@@ -23,9 +23,11 @@ class TextDataset(Dataset):
     self.labels = labels
 
   def __getitem__(self,idx):
+    #Create tokenizer
     encodings = tokenizer(self.texts[idx], truncation=True, padding="max_length")
     item = {key: torch.tensor(val) for key, val in encodings.items()}
     item['labels'] = torch.tensor(self.labels[idx],dtype=torch.float32)
+    #Remove encoding to prevent memory leak
     del encodings
     return item
 
