@@ -11,7 +11,7 @@ license: unknown
 ---
 
 # csuy-4613-Project
-# Milestone 1
+## Milestone 1
 
 The operating system that is being used is Windows 10 Home. In order to run Docker on this operating system, a
 Windows Subsystem for Linux (WSL) must be used.
@@ -31,7 +31,7 @@ that the docker is working.
 
 ![docker](https://user-images.githubusercontent.com/33811542/227808275-baf0dec3-181c-4b04-beeb-b42c35667edb.jpg)
 
-Milestone 2
+## Milestone 2
 
 Hugging Face URL:
 https://huggingface.co/spaces/dahongj/sentiment-analysis
@@ -58,7 +58,7 @@ analysis of the input text as well as a probability score, which we used with th
 functionality to output back onto HuggingFace's interface for the user to see. This was done for all three
 models.
 
-Milestone 3
+## Milestone 3
 
 Finetuned Model URL: https://huggingface.co/dahongj/finetuned_toxictweets
 
@@ -73,7 +73,7 @@ of toxicity included in the dataset that we want to finetune for. Using the nati
 of training as demonstrated on the HuggingFace documentation, the model was trained and evaluated.
 Both the finetuned model and its tokenizer are saved and uploaded onto HuggingFace.
 
-Milestone 4
+## Milestone 4
 
 Results:
 The resulting web application on HuggingFace is a sentiment analysis application that allows users
