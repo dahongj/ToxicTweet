@@ -86,3 +86,5 @@ highest level of toxicity. An example of 10 texts and their results are shown as
 
 The landing page for the application and a video to demonstrate how to use the application are included
 on this github.
+
+Landing Page: https://sites.google.com/nyu.edu/toxtweet/home
