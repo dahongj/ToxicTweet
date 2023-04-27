@@ -116,6 +116,13 @@ def rendPage():
     st.text("")
     st.text("")
     st.text("")
+    st.text("")
+    st.text("")
+    st.text("")
+    st.text("")
+    st.text("")
+    st.text("")
+    st.text("")
     #Image for sample 10 texts
     image = Image.open("milestone3.jpg")
     st.image(image, caption="10 Example Texts")
