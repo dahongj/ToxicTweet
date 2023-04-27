@@ -1,4 +1,3 @@
-import numpy as np
 import streamlit as st
 from transformers import pipeline
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
@@ -109,6 +108,7 @@ def rendPage():
         if(userText!="" and type != None):
             st.text("")
             getSent(userText,type)
+
     st.text("")
     st.text("")
     st.text("")
