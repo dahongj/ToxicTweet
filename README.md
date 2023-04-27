@@ -11,7 +11,7 @@ license: unknown
 ---
 
 # csuy-4613-Project
-Milestone 1
+# Milestone 1
 
 The operating system that is being used is Windows 10 Home. In order to run Docker on this operating system, a
 Windows Subsystem for Linux (WSL) must be used.
