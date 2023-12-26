@@ -88,3 +88,7 @@ The landing page for the application and a video to demonstrate how to use the a
 on this github.
 
 Landing Page: https://sites.google.com/nyu.edu/toxtweet/home
+
+
+https://github.com/dahongj/ToxicTweet/assets/33811542/79d0bdd7-136f-4fc9-bf22-1f561d323385
+
